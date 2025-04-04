@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+    .bulb
+    {
+        height: 150px;
+        width: 150px;
+        border: 2px solid  black;
+        border-radius: 50%;
+    }
+    button{
+        height: 35px;
+        width: 70px;
+        background-color: aliceblue;
+        margin-left: 38px ;
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="bulb"></div>
+    <button>ON/OFF</button>
+    <script>
+        let light=document.querySelector(".bulb")
+        let btn=document.querySelector("button")
+        let flag=0
+        btn.addEventListener("click",function()
+        {
+            
+            if(flag==0)
+            {
+                light.style.backgroundColor="yellow"
+                flag=1
+            }
+        else{
+            light.style.backgroundColor="white"
+            flag=0
+        }
+       
+        })
+    </script>
+</body>
+</html>
